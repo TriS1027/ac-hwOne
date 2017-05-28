@@ -1,18 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MenuComponent } from './menu/menu.component';
+import { TempInfoComponent } from './temp-info/temp-info.component';
+import { SocialInfoComponent } from './social-info/social-info.component';
+import { HotelFilterPipe } from './common/pipe/hotel-filter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    TempInfoComponent,
+    SocialInfoComponent,
+    HotelFilterPipe
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

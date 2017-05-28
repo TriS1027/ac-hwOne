@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Hot Weather Widget</h1>
+<div class="element" *ngIf="hotelList$ | async as hotelList; else loadGif">
+  <div class="element-left">
+    <app-menu [hotel_list]="hotelList" (onSelectingHotel)="selectHotel($event)"></app-menu>
+  </div>
+  <div class="element-right">
+    <app-temp-info [hotel]="hotel"></app-temp-info>
+    <app-social-info [hotel]="hotel"></app-social-info>
+  </div>
+</div>
+
+<ng-template #loadGif>
+  <div class="loadBlock" style="text-align: center">
+    <img src="/assets/images/circle.gif" alt="" style="max-height: 100px; max-width: 100px">
+  </div>
+</ng-template>

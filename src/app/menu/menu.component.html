@@ -15,20 +15,9 @@
     <span class="line"> </span>
     <div class="activity_box">
       <div class="scrollbar" id="style-2">
-        <div class="activity-row" *ngFor="let hotel of hotels | hotelFilter: selectedFilter" (click)="selectHotel(hotel)">
-          <div class="activity-desc">
-            <h5>{{hotel.name}}</h5>
-            <p>{{hotel.address}}</p>
-            <h6>Tel:{{hotel.phone}}</h6>
-          </div>
-          <div class="activity-img">
-            <ul>
-              <li><img [src]='hotel.images[0]'  alt=""/></li>
-              <li><img [src]='hotel.images[1]'  alt=""/></li>
-            </ul>
-          </div>
-          <div class="clear"> </div>
-        </div>
+        <app-hotel-item *ngFor="let hotel of hotels | hotelFilter: selectedFilter"
+                        (click)="selectHotel(hotel)" [hotel]="hotel">
+        </app-hotel-item>
       </div>
     </div>
   </div>

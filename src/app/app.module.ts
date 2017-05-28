@@ -6,6 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { TempInfoComponent } from './temp-info/temp-info.component';
 import { SocialInfoComponent } from './social-info/social-info.component';
 import { HotelFilterPipe } from './common/pipe/hotel-filter.pipe';
+import { HotelItemComponent } from './hotel-item/hotel-item.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HotelFilterPipe } from './common/pipe/hotel-filter.pipe';
     MenuComponent,
     TempInfoComponent,
     SocialInfoComponent,
-    HotelFilterPipe
+    HotelFilterPipe,
+    HotelItemComponent
   ],
   imports: [
     BrowserModule,
